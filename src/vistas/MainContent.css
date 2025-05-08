@@ -1,0 +1,223 @@
+/* MainContent.css */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #dc2626;
+    --text-dark: #1e293b;
+    --text-medium: #475569;
+    --background: #f8fafc;
+    --white: #ffffff;
+    --card-bg: #fff;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 2px 4px rgba(0,0,0,0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Estructura principal */
+  .main-content {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+    padding: 1rem;
+    min-height: 100vh;
+    background-color: var(--background);
+    transition: var(--transition);
+  }
+  
+  .main-content.collapsed {
+    margin-left: 20px;
+    width: calc(100% - 20px);
+  }
+  
+  .content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* Filtro de categorías */
+  .category-filter {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .category-button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .category-button.active {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+  
+  /* Grid de tarjetas */
+  .characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  /* Tarjeta individual */
+  .character-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  
+  .character-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Sección de imagen */
+  .card-image-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Contenido de la tarjeta */
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-header {
+    margin-bottom: 0.8rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin: 0 0 0.2rem 0;
+  }
+  
+  .card-author {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+    margin: 0.5rem 0;
+  }
+  
+  /* Pie de tarjeta */
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #f1f5f9;
+  }
+  
+  .likes-counter {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+  }
+  
+  /* Botones de acción */
+  .card-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .action-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .action-button.chat {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .main-content {
+      padding: 0.8rem;
+    }
+    
+    .characters-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0 !important;
+      width: 100% !important;
+      padding: 0.5rem;
+    }
+    
+    .category-filter {
+      flex-wrap: wrap;
+    }
+    
+    .card-image-container {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .character-card {
+      margin: 0.3rem;
+    }
+    
+    .card-content {
+      padding: 0.8rem;
+    }
+    
+    .action-button {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes cardEntrance {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .character-card {
+    animation: cardEntrance 0.4s ease forwards;
+  }
+ 
+.chat-link {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }

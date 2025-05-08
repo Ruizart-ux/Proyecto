@@ -1,0 +1,150 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+    padding: 20px;
+  }
+  
+  .login-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  .login-form h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .login-form p {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: #2980b9;
+  }
+  
+  .additional-options {
+    margin-top: 25px;
+    text-align: center;
+  }
+  
+  .additional-options a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .additional-options a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-login {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-button:hover {
+    opacity: 0.9;
+  }
+  
+  .social-button.google {
+    background: #db4437;
+    color: white;
+  }
+  
+  .social-button.facebook {
+    background: #3b5998;
+    color: white;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .login-form {
+      padding: 25px;
+    }
+    
+    .social-button {
+      font-size: 13px;
+    }
+  }
