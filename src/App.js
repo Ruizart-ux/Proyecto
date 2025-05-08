@@ -8,6 +8,7 @@ import Navbar from './vistas/navbar';
 import MainLayout from './vistas/MainLayout';
 import MainContent from './vistas/MainContent';
 import Chat from './vistas/Chat';
+import CreateCharacter from './vistas/CreateCharacter';
 import './vistas/style.css'
 
 const Home = () => {
@@ -34,6 +35,7 @@ function App() {
           <Route element={<MainLayout isAuthenticated={isAuthenticated} handleLogout={handleLogout} />}>
             <Route path="/" element={<Home />} />
             <Route path="/chat/:characterId" element={<Chat />} />
+            <Route path="/create-character" element={<CreateCharacter />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

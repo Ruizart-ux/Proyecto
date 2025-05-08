@@ -31,9 +31,9 @@ const Navbar = ({ isAuthenticated, onLogout }) => {
           {isExpanded && <span>Descubrir</span>}
         </Link>
         
-        <Link to="/notifications" className="nav-link">
-          <i className="fas fa-bell"></i>
-          {isExpanded && <span>Notificaciones</span>}
+        <Link to="/create-character" className="nav-link">
+          <i className="fas fa-plus-circle"></i>
+          {isExpanded && <span>Crear Personaje</span>}
         </Link>
         
         <Link to="/settings" className="nav-link">
