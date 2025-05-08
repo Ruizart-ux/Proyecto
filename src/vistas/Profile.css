@@ -1,0 +1,95 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .profile-section {
+    margin-bottom: 3rem;
+  }
+  
+  .warning-text {
+    color: #ef4444;
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .profile-image-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1rem;
+    border: 3px solid #2563eb;
+  }
+  
+  .characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .character-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .character-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .character-info {
+    margin-top: 1rem;
+  }
+  
+  .character-category {
+    background: #e2e8f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .character-actions {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .edit-button {
+    background: #2563eb;
+    color: white;
+  }
+  
+  .delete-button {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .edit-button:hover, .delete-button:hover {
+    opacity: 0.8;
+  }

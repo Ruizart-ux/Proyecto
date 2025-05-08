@@ -9,6 +9,7 @@ import MainLayout from './vistas/MainLayout';
 import MainContent from './vistas/MainContent';
 import Chat from './vistas/Chat';
 import CreateCharacter from './vistas/CreateCharacter';
+import Profile from './vistas/Profile';
 import './vistas/style.css'
 
 const Home = () => {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/chat/:characterId" element={<Chat />} />
             <Route path="/create-character" element={<CreateCharacter />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
